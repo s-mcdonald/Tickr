@@ -1,8 +1,8 @@
 ## Tickr
 
-> **Note:** This is a personal project for educational purposes and is currently in active development.
+> **Note:** This is a personal project for educational purposes and is currently in development.
 
-Tickr is a C#-based web service designed to help investors analyze stock market ticker symbols and efficiently manage their investment portfolios. Whether you're a beginner or an experienced trader, Tickr offers a user-friendly interface and powerful features to enhance your investment strategy.
+Tickr is a C#-based application utilizing client server architecture and microservices designed to help investors analyze stock market ticker symbols and efficiently manage their investment portfolios.
 
 
 🚀 Features
@@ -19,14 +19,15 @@ Tickr is a C#-based web service designed to help investors analyze stock market 
 * Backend: C# with ASP.NET Core
 * Database: SQL Server
 * Frontend: 
-  -  Web: HTML, CSS, JavaScript (Optional for future enhancements)
-  -  WinForms: A Native WinForms client
+  - Web
+  - Win Forms
+  - WPF Client 
 
-
-### Company Logos
-https://github.com/nvstly/icons
 
 ### Attribution
+
+Company Logos: https://github.com/nvstly/icons
+
 Images from
-<a href="https://www.flaticon.com/free-icons/united-states" title="united states icons">United states icons created by Freepik - Flaticon</a>
-<a href="https://www.flaticon.com/free-icons/health" title="health icons">Health icons created by Uniconlabs - Flaticon</a>
+- <a href="https://www.flaticon.com/free-icons/united-states" title="united states icons">United states icons created by Freepik - Flaticon</a>
+- <a href="https://www.flaticon.com/free-icons/health" title="health icons">Health icons created by Uniconlabs - Flaticon</a>
