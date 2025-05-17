@@ -7,30 +7,26 @@ namespace TickrWindowsClient
 {
     public partial class SimpleUI : Form
     {
-        HealthCheckService healthCheck;
+        private readonly AssetService assetService;
+        private readonly HealthCheckService healthCheck;
 
         public SimpleUI()
         {
             InitializeComponent();
+            assetService = new AssetService();
             healthCheck = new HealthCheckService();
         }
 
         private void menuItemHealthCheck_Click(object sender, EventArgs e)
         {
-            var result = healthCheck.FetchAll();
-
-
-            txtTest.Text = result;
+            txtTest.Text = healthCheck.FetchAll();
         }
 
         private void menuItemSwitchUS_Click(object sender, EventArgs e)
         {
             flowAssets.SuspendLayout();
 
-            // Get a list of assets from the server
-            string[] assets = { "TSLA", "PLTR" };
-
-            //var result = tickerService.GetAllAssets("NASDAQ");
+            var assets = assetService.FetchAll();
 
             // Iterate and add items
             foreach (var i in assets)

@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TickrWindowsClient", "Tickr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TickrStateService", "TickrStateService\TickrStateService.csproj", "{04C014FC-77E9-474A-BBE9-AF28D83F0D53}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TickrTickerService", "TickrTickerService\TickrTickerService.csproj", "{D27E5C2E-74B1-47CB-935A-EC3498CE4C5B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{04C014FC-77E9-474A-BBE9-AF28D83F0D53}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{04C014FC-77E9-474A-BBE9-AF28D83F0D53}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{04C014FC-77E9-474A-BBE9-AF28D83F0D53}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D27E5C2E-74B1-47CB-935A-EC3498CE4C5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D27E5C2E-74B1-47CB-935A-EC3498CE4C5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D27E5C2E-74B1-47CB-935A-EC3498CE4C5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D27E5C2E-74B1-47CB-935A-EC3498CE4C5B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

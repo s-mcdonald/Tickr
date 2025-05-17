@@ -1,0 +1,6 @@
+@TickrTickerService_HostAddress = http://localhost:5054
+
+GET {{TickrTickerService_HostAddress}}/tickr/assets/list
+Accept: application/json
+
+###
