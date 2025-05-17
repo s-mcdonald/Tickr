@@ -1,4 +1,4 @@
-namespace TickrStateService.Entities
+namespace TickrTickerService.Entities
 {
     public class SyatemState
     {

@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace TickrTickerService.Controllers
 {
     [ApiController]
-    [Route("tickr/assets")]
+    [Route("tickr")]
     public class FetchAllSymbolsController : ControllerBase
     {
         private readonly ILogger<FetchAllSymbolsController> _logger;
@@ -13,7 +13,7 @@ namespace TickrTickerService.Controllers
             _logger = logger;
         }
 
-        [HttpGet("list", Name = "ListAllAssets")]
+        [HttpGet("assets", Name = "ListAllAssets")]
         public IEnumerable<AssetSymbol> Get()
         {
             var requestTime = DateTime.Now.ToShortTimeString();

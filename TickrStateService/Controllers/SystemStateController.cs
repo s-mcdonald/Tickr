@@ -1,10 +1,11 @@
 using Microsoft.AspNetCore.Mvc;
 using TickrStateService.Entities;
+using TickrStateService.Services;
 
 namespace TickrStateService.Controllers
 {
     [ApiController]
-    [Route("tickr/status")]
+    [Route("tickr")]
     public class SystemStateController : ControllerBase
     {
         private static readonly string[] States = new[]
@@ -19,20 +20,19 @@ namespace TickrStateService.Controllers
             _logger = logger;
         }
 
-        [HttpGet("all", Name = "Status")]
-        public IEnumerable<SyatemState> Get()
+        // We will need to return this to IEnumerable but for now we just need to fetch the
+        // single State of assets.
+        [HttpGet("status", Name = "Status")]
+        public async Task<SyatemState> GetAsync()
         {
-            var requestTime = DateTime.Now.ToShortTimeString();
+            Console.WriteLine($"Request pinged at: {DateTime.Now.ToShortTimeString()}");
 
-            Console.WriteLine($"Request pinged at: {requestTime}");
+            // refactor this to a repository class or a configuration
+            string StatusURI = "http://localhost:5054/tickr/assets/status";
 
+            SyatemState syatemState = await ApiRequest.GetAsync<SyatemState>(StatusURI);
 
-            return Enumerable.Range(1, 5).Select(index => new SyatemState
-            {
-                Date = DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
-                Summary = States[Random.Shared.Next(States.Length)]
-            })
-            .ToArray();
+            return syatemState;
         }
     }
 }
