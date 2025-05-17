@@ -48,7 +48,7 @@
             this.menuItemOpen = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.menuItemExit = new System.Windows.Forms.ToolStripMenuItem();
-            this.formsPlot1 = new ScottPlot.WinForms.FormsPlot();
+            this.chart = new ScottPlot.WinForms.FormsPlot();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer)).BeginInit();
             this.splitContainer.Panel1.SuspendLayout();
             this.splitContainer.Panel2.SuspendLayout();
@@ -160,7 +160,7 @@
             // 
             // tabPageTest
             // 
-            this.tabPageTest.Controls.Add(this.formsPlot1);
+            this.tabPageTest.Controls.Add(this.chart);
             this.tabPageTest.Location = new System.Drawing.Point(4, 25);
             this.tabPageTest.Name = "tabPageTest";
             this.tabPageTest.Padding = new System.Windows.Forms.Padding(3);
@@ -275,13 +275,14 @@
             this.menuItemExit.Size = new System.Drawing.Size(128, 26);
             this.menuItemExit.Text = "E&xit";
             // 
-            // formsPlot1
+            // chart
             // 
-            this.formsPlot1.DisplayScale = 0F;
-            this.formsPlot1.Location = new System.Drawing.Point(133, 57);
-            this.formsPlot1.Name = "formsPlot1";
-            this.formsPlot1.Size = new System.Drawing.Size(593, 265);
-            this.formsPlot1.TabIndex = 0;
+            this.chart.DisplayScale = 0F;
+            this.chart.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.chart.Location = new System.Drawing.Point(4, 4);
+            this.chart.Name = "chart";
+            this.chart.Size = new System.Drawing.Size(1114, 451);
+            this.chart.TabIndex = 0;
             // 
             // SimpleUI
             // 
@@ -295,7 +296,6 @@
             this.Name = "SimpleUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tickr (Windows Client)";
-            this.TopMost = true;
             this.splitContainer.Panel1.ResumeLayout(false);
             this.splitContainer.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer)).EndInit();
@@ -341,7 +341,7 @@
         private System.Windows.Forms.TabPage tabPageAssets;
         private System.Windows.Forms.TabPage tabPageWatchlist;
         private System.Windows.Forms.FlowLayoutPanel flowAssets;
-        private ScottPlot.WinForms.FormsPlot formsPlot1;
+        private ScottPlot.WinForms.FormsPlot chart;
     }
 }
 

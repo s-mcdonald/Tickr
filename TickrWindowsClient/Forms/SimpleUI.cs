@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using TickrWindowsClient.Api;
+using TickrWindowsClient.DataProviders;
 using TickrWindowsClient.UserControls;
 
 namespace TickrWindowsClient
@@ -15,6 +16,14 @@ namespace TickrWindowsClient
             InitializeComponent();
             assetService = new AssetService();
             healthCheck = new HealthCheckService();
+
+            var sampleDataProvider = new SampleChartDataProvider();
+            chart.Plot.Add.Scatter(
+                sampleDataProvider.getXData(),
+                sampleDataProvider.getYData()
+            );
+
+            chart.Refresh();
         }
 
         private void menuItemHealthCheck_Click(object sender, EventArgs e)
