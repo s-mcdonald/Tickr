@@ -4,14 +4,14 @@ namespace TickrTickerService.Entities
 {
     public class Asset
     {
-        public string Symbol  { get; set; }
-        public string Exchange { get; set; }
+        public string? Symbol  { get; set; }
+        public string? Exchange { get; set; }
 
-        public AssetType AssetType { get; set; }
+        public AssetType? AssetType { get; set; }
 
         public bool Valid()
         {
-            return Symbol != null && Exchange != null;
+            return AssetType != null && Symbol != null && Exchange != null && Exchange != String.Empty;
         }
     }
 }

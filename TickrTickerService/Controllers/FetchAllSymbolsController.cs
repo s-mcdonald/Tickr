@@ -21,18 +21,77 @@ namespace TickrTickerService.Controllers
 
             Console.WriteLine($"Request pinged at: {requestTime}");
 
-            string[] nasdaqTickers = new string[]
+            // TODO: Fetch this data from external source or DB service
+            // for now just hard coded for initial development.
+            List<(string Symbol, string Exchange)> nasdaqAssets = new List<(string, string)>
             {
-                "TSLA", "PLTR", "AAPL", "MSFT", "GOOGL", "AMZN", "NVDA", "META", "NFLX", "INTC",
-                "AMD", "ADBE", "CSCO", "PYPL", "QCOM", "CMCSA", "PEP", "COST", "AVGO", "TXN",
-                "MRNA", "SBUX"
+                ("TSLA", "NASDAQ"),
+                ("PLTR", "NASDAQ"),
+                ("AAPL", "NASDAQ"),
+                ("MSFT", "NASDAQ"),
+                ("GOOGL", "NASDAQ"),
+                ("AMZN", "NASDAQ"),
+                ("NVDA", "NASDAQ"),
+                ("META", "NASDAQ"),
+                ("NFLX", "NASDAQ"),
+                ("INTC", "NASDAQ"),
+                ("AMD", "NASDAQ"),
+                ("ADBE", "NASDAQ"),
+                ("CSCO", "NASDAQ"),
+                ("PYPL", "NASDAQ"),
+                ("QCOM", "NASDAQ"),
+                ("CMCSA", "NASDAQ"),
+                ("PEP", "NASDAQ"),
+                ("COST", "NASDAQ"),
+                ("AVGO", "NASDAQ"),
+                ("TXN", "NASDAQ"),
+                ("MRNA", "NASDAQ"),
+                ("SBUX", "NASDAQ"),
             };
 
-            return nasdaqTickers.Select(index => new Asset
+            List<(string Symbol, string Exchange)> nyseAssets = new List<(string,string)>
             {
-                Symbol = index
-            })
-            .ToArray();
+                ("BRK.A", "NYSE"),
+                ("JNJ", "NYSE"),
+                ("V", "NYSE"),
+                ("PG", "NYSE"),
+                ("DIS", "NYSE"),
+                ("WMT", "NYSE"),
+            };
+
+            // Invalid valuies
+            List<(string Symbol, string Exchange)> otherAssets = new List<(string, string)>
+            {
+                ("ABCD", ""),
+                ("XYZ", ""),
+            };
+
+
+            var x = nasdaqAssets
+                .Select(item => new Asset
+                {
+                    Symbol = item.Symbol,
+                    Exchange = item.Exchange,
+                    AssetType = Enums.AssetType.Equities
+                })
+                .Concat(nyseAssets
+                    .Select(item => new Asset
+                    {
+                        Symbol = item.Symbol,
+                        Exchange = item.Exchange,
+                        AssetType = Enums.AssetType.Equities
+                    }))
+                .Concat(otherAssets
+                    .Select(item => new Asset
+                    {
+                        Symbol = item.Symbol,
+                        Exchange = item.Exchange,
+                        AssetType = Enums.AssetType.Equities
+                    }))
+                .ToArray();
+
+            // only return valid assets
+            return x.Where(x => x.Valid() == true);
         }
     }
 }

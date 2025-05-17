@@ -1,10 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 
 namespace TickrWindowsClient.UserControls
@@ -18,6 +13,21 @@ namespace TickrWindowsClient.UserControls
             string filePath = Application.StartupPath + $"/Img/Ticker/{symbol}.png";
             logoImage.ImageLocation = filePath;
             logoImage.SizeMode = PictureBoxSizeMode.StretchImage;
+        }
+
+        private void logoImage_MouseHover(object sender, EventArgs e)
+        {
+            this.BackColor = Color.White;
+        }
+
+        private void logoImage_MouseLeave(object sender, EventArgs e)
+        {
+            this.BackColor = Color.Black;
+        }
+
+        private void logoImage_Click(object sender, EventArgs e)
+        {
+            // open up a tab and show the chart
         }
     }
 }

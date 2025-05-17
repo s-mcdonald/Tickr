@@ -39,15 +39,15 @@
             this.tabPageTest = new System.Windows.Forms.TabPage();
             this.toolStripContainer = new System.Windows.Forms.ToolStripContainer();
             this.toolStripMain = new System.Windows.Forms.ToolStrip();
+            this.menuItemSwitchAU = new System.Windows.Forms.ToolStripButton();
+            this.menuItemSwitchUS = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.menuItemHealthCheck = new System.Windows.Forms.ToolStripButton();
             this.menuStripMain = new System.Windows.Forms.MenuStrip();
             this.portfolioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuItemOpen = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.menuItemExit = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuItemSwitchAU = new System.Windows.Forms.ToolStripButton();
-            this.menuItemSwitchUS = new System.Windows.Forms.ToolStripButton();
-            this.menuItemHealthCheck = new System.Windows.Forms.ToolStripButton();
             this.splitContainer.Panel1.SuspendLayout();
             this.splitContainer.Panel2.SuspendLayout();
             this.splitContainer.SuspendLayout();
@@ -69,7 +69,7 @@
             this.txtTest.Location = new System.Drawing.Point(3, 3);
             this.txtTest.Multiline = true;
             this.txtTest.Name = "txtTest";
-            this.txtTest.Size = new System.Drawing.Size(890, 359);
+            this.txtTest.Size = new System.Drawing.Size(891, 361);
             this.txtTest.TabIndex = 1;
             // 
             // splitContainer
@@ -85,8 +85,8 @@
             // splitContainer.Panel2
             // 
             this.splitContainer.Panel2.Controls.Add(this.tabControl);
-            this.splitContainer.Size = new System.Drawing.Size(1120, 394);
-            this.splitContainer.SplitterDistance = 208;
+            this.splitContainer.Size = new System.Drawing.Size(1120, 396);
+            this.splitContainer.SplitterDistance = 207;
             this.splitContainer.SplitterWidth = 8;
             this.splitContainer.TabIndex = 2;
             // 
@@ -98,7 +98,7 @@
             this.tabControlSideBar.Location = new System.Drawing.Point(0, 0);
             this.tabControlSideBar.Name = "tabControlSideBar";
             this.tabControlSideBar.SelectedIndex = 0;
-            this.tabControlSideBar.Size = new System.Drawing.Size(208, 394);
+            this.tabControlSideBar.Size = new System.Drawing.Size(207, 396);
             this.tabControlSideBar.TabIndex = 0;
             // 
             // tabPageAssets
@@ -107,26 +107,27 @@
             this.tabPageAssets.Location = new System.Drawing.Point(4, 25);
             this.tabPageAssets.Name = "tabPageAssets";
             this.tabPageAssets.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageAssets.Size = new System.Drawing.Size(200, 365);
+            this.tabPageAssets.Size = new System.Drawing.Size(199, 367);
             this.tabPageAssets.TabIndex = 0;
             this.tabPageAssets.Text = "Assets";
             this.tabPageAssets.UseVisualStyleBackColor = true;
             // 
             // flowAssets
             // 
+            this.flowAssets.AutoScroll = true;
             this.flowAssets.BackColor = System.Drawing.Color.Black;
             this.flowAssets.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowAssets.Location = new System.Drawing.Point(4, 4);
+            this.flowAssets.Location = new System.Drawing.Point(3, 3);
             this.flowAssets.Name = "flowAssets";
             this.flowAssets.Padding = new System.Windows.Forms.Padding(3);
-            this.flowAssets.Size = new System.Drawing.Size(243, 449);
+            this.flowAssets.Size = new System.Drawing.Size(193, 361);
             this.flowAssets.TabIndex = 0;
             // 
             // tabPageWatchlist
             // 
             this.tabPageWatchlist.Location = new System.Drawing.Point(4, 25);
             this.tabPageWatchlist.Name = "tabPageWatchlist";
-            this.tabPageWatchlist.Size = new System.Drawing.Size(200, 367);
+            this.tabPageWatchlist.Size = new System.Drawing.Size(200, 365);
             this.tabPageWatchlist.TabIndex = 1;
             this.tabPageWatchlist.Text = "Watchlist";
             this.tabPageWatchlist.UseVisualStyleBackColor = true;
@@ -140,7 +141,7 @@
             this.tabControl.Location = new System.Drawing.Point(0, 0);
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
-            this.tabControl.Size = new System.Drawing.Size(904, 394);
+            this.tabControl.Size = new System.Drawing.Size(905, 396);
             this.tabControl.TabIndex = 0;
             // 
             // tabPageDebug
@@ -149,7 +150,7 @@
             this.tabPageDebug.Location = new System.Drawing.Point(4, 25);
             this.tabPageDebug.Name = "tabPageDebug";
             this.tabPageDebug.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageDebug.Size = new System.Drawing.Size(896, 365);
+            this.tabPageDebug.Size = new System.Drawing.Size(897, 367);
             this.tabPageDebug.TabIndex = 0;
             this.tabPageDebug.Text = "Debug";
             this.tabPageDebug.UseVisualStyleBackColor = true;
@@ -159,7 +160,7 @@
             this.tabPageTest.Location = new System.Drawing.Point(4, 25);
             this.tabPageTest.Name = "tabPageTest";
             this.tabPageTest.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageTest.Size = new System.Drawing.Size(896, 367);
+            this.tabPageTest.Size = new System.Drawing.Size(896, 365);
             this.tabPageTest.TabIndex = 1;
             this.tabPageTest.Text = "Test";
             this.tabPageTest.UseVisualStyleBackColor = true;
@@ -170,11 +171,11 @@
             // toolStripContainer.ContentPanel
             // 
             this.toolStripContainer.ContentPanel.Controls.Add(this.splitContainer);
-            this.toolStripContainer.ContentPanel.Size = new System.Drawing.Size(1120, 394);
+            this.toolStripContainer.ContentPanel.Size = new System.Drawing.Size(1120, 396);
             this.toolStripContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.toolStripContainer.Location = new System.Drawing.Point(0, 30);
+            this.toolStripContainer.Location = new System.Drawing.Point(0, 28);
             this.toolStripContainer.Name = "toolStripContainer";
-            this.toolStripContainer.Size = new System.Drawing.Size(1120, 421);
+            this.toolStripContainer.Size = new System.Drawing.Size(1120, 423);
             this.toolStripContainer.TabIndex = 3;
             this.toolStripContainer.Text = "toolStripContainer1";
             // 
@@ -193,51 +194,8 @@
             this.menuItemHealthCheck});
             this.toolStripMain.Location = new System.Drawing.Point(4, 0);
             this.toolStripMain.Name = "toolStripMain";
-            this.toolStripMain.Size = new System.Drawing.Size(145, 27);
+            this.toolStripMain.Size = new System.Drawing.Size(106, 27);
             this.toolStripMain.TabIndex = 0;
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 27);
-            // 
-            // menuStripMain
-            // 
-            this.menuStripMain.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStripMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.portfolioToolStripMenuItem});
-            this.menuStripMain.Location = new System.Drawing.Point(0, 0);
-            this.menuStripMain.Name = "menuStripMain";
-            this.menuStripMain.Size = new System.Drawing.Size(1120, 30);
-            this.menuStripMain.TabIndex = 4;
-            this.menuStripMain.Text = "menuStrip1";
-            // 
-            // portfolioToolStripMenuItem
-            // 
-            this.portfolioToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.menuItemOpen,
-            this.toolStripSeparator1,
-            this.menuItemExit});
-            this.portfolioToolStripMenuItem.Name = "portfolioToolStripMenuItem";
-            this.portfolioToolStripMenuItem.Size = new System.Drawing.Size(80, 26);
-            this.portfolioToolStripMenuItem.Text = "Portfolio";
-            // 
-            // menuItemOpen
-            // 
-            this.menuItemOpen.Name = "menuItemOpen";
-            this.menuItemOpen.Size = new System.Drawing.Size(128, 26);
-            this.menuItemOpen.Text = "&Open";
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(125, 6);
-            // 
-            // menuItemExit
-            // 
-            this.menuItemExit.Name = "menuItemExit";
-            this.menuItemExit.Size = new System.Drawing.Size(128, 26);
-            this.menuItemExit.Text = "E&xit";
             // 
             // menuItemSwitchAU
             // 
@@ -260,6 +218,11 @@
             this.menuItemSwitchUS.ToolTipText = "NASDAQ and NYSE";
             this.menuItemSwitchUS.Click += new System.EventHandler(this.menuItemSwitchUS_Click);
             // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 27);
+            // 
             // menuItemHealthCheck
             // 
             this.menuItemHealthCheck.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -269,6 +232,44 @@
             this.menuItemHealthCheck.Size = new System.Drawing.Size(29, 24);
             this.menuItemHealthCheck.Text = "toolStripButton1";
             this.menuItemHealthCheck.Click += new System.EventHandler(this.menuItemHealthCheck_Click);
+            // 
+            // menuStripMain
+            // 
+            this.menuStripMain.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStripMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.portfolioToolStripMenuItem});
+            this.menuStripMain.Location = new System.Drawing.Point(0, 0);
+            this.menuStripMain.Name = "menuStripMain";
+            this.menuStripMain.Size = new System.Drawing.Size(1120, 28);
+            this.menuStripMain.TabIndex = 4;
+            this.menuStripMain.Text = "menuStrip1";
+            // 
+            // portfolioToolStripMenuItem
+            // 
+            this.portfolioToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuItemOpen,
+            this.toolStripSeparator1,
+            this.menuItemExit});
+            this.portfolioToolStripMenuItem.Name = "portfolioToolStripMenuItem";
+            this.portfolioToolStripMenuItem.Size = new System.Drawing.Size(80, 24);
+            this.portfolioToolStripMenuItem.Text = "Portfolio";
+            // 
+            // menuItemOpen
+            // 
+            this.menuItemOpen.Name = "menuItemOpen";
+            this.menuItemOpen.Size = new System.Drawing.Size(128, 26);
+            this.menuItemOpen.Text = "&Open";
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(125, 6);
+            // 
+            // menuItemExit
+            // 
+            this.menuItemExit.Name = "menuItemExit";
+            this.menuItemExit.Size = new System.Drawing.Size(128, 26);
+            this.menuItemExit.Text = "E&xit";
             // 
             // SimpleUI
             // 
