@@ -22,6 +22,11 @@ namespace TickrStateService.Controllers
         [HttpGet("all", Name = "Status")]
         public IEnumerable<SyatemState> Get()
         {
+            var requestTime = DateTime.Now.ToShortTimeString();
+
+            Console.WriteLine($"Request pinged at: {requestTime}");
+
+
             return Enumerable.Range(1, 5).Select(index => new SyatemState
             {
                 Date = DateOnly.FromDateTime(DateTime.Now.AddDays(index)),

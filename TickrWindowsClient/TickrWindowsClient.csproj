@@ -35,6 +35,7 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Net" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Data" />
@@ -44,15 +45,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="SimpleUI.cs">
+    <Compile Include="Api\ApiRequest.cs" />
+    <Compile Include="Api\ApiResponse.cs" />
+    <Compile Include="Services\HealthCheckService.cs" />
+    <Compile Include="Api\ApiEndPoint.cs" />
+    <Compile Include="Api\RequestStatus.cs" />
+    <Compile Include="Forms\SimpleUI.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SimpleUI.Designer.cs">
+    <Compile Include="Forms\SimpleUI.Designer.cs">
       <DependentUpon>SimpleUI.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="SimpleUI.resx">
+    <EmbeddedResource Include="Forms\SimpleUI.resx">
       <DependentUpon>SimpleUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -63,6 +69,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -73,6 +80,14 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="UserControls\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Img\flag-aus.png" />
+    <Content Include="Img\flag-usa.png" />
+    <None Include="Img\status-health.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

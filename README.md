@@ -19,3 +19,9 @@ Database: SQL Server
 Frontend: 
     Web: HTML, CSS, JavaScript (Optional for future enhancements)
     WinForms: A Native WinForms client
+
+
+## Attribution
+Images from
+<a href="https://www.flaticon.com/free-icons/united-states" title="united states icons">United states icons created by Freepik - Flaticon</a>
+<a href="https://www.flaticon.com/free-icons/health" title="health icons">Health icons created by Uniconlabs - Flaticon</a>
