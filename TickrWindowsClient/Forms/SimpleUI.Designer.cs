@@ -30,27 +30,29 @@
         {
             this.txtTest = new System.Windows.Forms.TextBox();
             this.splitContainer = new System.Windows.Forms.SplitContainer();
+            this.tabControlSideBar = new System.Windows.Forms.TabControl();
+            this.tabPageAssets = new System.Windows.Forms.TabPage();
+            this.flowAssets = new System.Windows.Forms.FlowLayoutPanel();
+            this.tabPageWatchlist = new System.Windows.Forms.TabPage();
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabPageDebug = new System.Windows.Forms.TabPage();
             this.tabPageTest = new System.Windows.Forms.TabPage();
             this.toolStripContainer = new System.Windows.Forms.ToolStripContainer();
             this.toolStripMain = new System.Windows.Forms.ToolStrip();
-            this.menuItemSwitchAU = new System.Windows.Forms.ToolStripButton();
-            this.menuItemSwitchUS = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.menuItemHealthCheck = new System.Windows.Forms.ToolStripButton();
             this.menuStripMain = new System.Windows.Forms.MenuStrip();
             this.portfolioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuItemOpen = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.menuItemExit = new System.Windows.Forms.ToolStripMenuItem();
-            this.tabControlSideBar = new System.Windows.Forms.TabControl();
-            this.tabPageAssets = new System.Windows.Forms.TabPage();
-            this.tabPageWatchlist = new System.Windows.Forms.TabPage();
-            this.flowAssets = new System.Windows.Forms.FlowLayoutPanel();
+            this.menuItemSwitchAU = new System.Windows.Forms.ToolStripButton();
+            this.menuItemSwitchUS = new System.Windows.Forms.ToolStripButton();
+            this.menuItemHealthCheck = new System.Windows.Forms.ToolStripButton();
             this.splitContainer.Panel1.SuspendLayout();
             this.splitContainer.Panel2.SuspendLayout();
             this.splitContainer.SuspendLayout();
+            this.tabControlSideBar.SuspendLayout();
+            this.tabPageAssets.SuspendLayout();
             this.tabControl.SuspendLayout();
             this.tabPageDebug.SuspendLayout();
             this.toolStripContainer.ContentPanel.SuspendLayout();
@@ -58,8 +60,6 @@
             this.toolStripContainer.SuspendLayout();
             this.toolStripMain.SuspendLayout();
             this.menuStripMain.SuspendLayout();
-            this.tabControlSideBar.SuspendLayout();
-            this.tabPageAssets.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtTest
@@ -69,7 +69,7 @@
             this.txtTest.Location = new System.Drawing.Point(3, 3);
             this.txtTest.Multiline = true;
             this.txtTest.Name = "txtTest";
-            this.txtTest.Size = new System.Drawing.Size(875, 312);
+            this.txtTest.Size = new System.Drawing.Size(890, 359);
             this.txtTest.TabIndex = 1;
             // 
             // splitContainer
@@ -85,9 +85,51 @@
             // splitContainer.Panel2
             // 
             this.splitContainer.Panel2.Controls.Add(this.tabControl);
-            this.splitContainer.Size = new System.Drawing.Size(1098, 347);
-            this.splitContainer.SplitterDistance = 205;
+            this.splitContainer.Size = new System.Drawing.Size(1120, 394);
+            this.splitContainer.SplitterDistance = 208;
+            this.splitContainer.SplitterWidth = 8;
             this.splitContainer.TabIndex = 2;
+            // 
+            // tabControlSideBar
+            // 
+            this.tabControlSideBar.Controls.Add(this.tabPageAssets);
+            this.tabControlSideBar.Controls.Add(this.tabPageWatchlist);
+            this.tabControlSideBar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControlSideBar.Location = new System.Drawing.Point(0, 0);
+            this.tabControlSideBar.Name = "tabControlSideBar";
+            this.tabControlSideBar.SelectedIndex = 0;
+            this.tabControlSideBar.Size = new System.Drawing.Size(208, 394);
+            this.tabControlSideBar.TabIndex = 0;
+            // 
+            // tabPageAssets
+            // 
+            this.tabPageAssets.Controls.Add(this.flowAssets);
+            this.tabPageAssets.Location = new System.Drawing.Point(4, 25);
+            this.tabPageAssets.Name = "tabPageAssets";
+            this.tabPageAssets.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageAssets.Size = new System.Drawing.Size(200, 365);
+            this.tabPageAssets.TabIndex = 0;
+            this.tabPageAssets.Text = "Assets";
+            this.tabPageAssets.UseVisualStyleBackColor = true;
+            // 
+            // flowAssets
+            // 
+            this.flowAssets.BackColor = System.Drawing.Color.Black;
+            this.flowAssets.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowAssets.Location = new System.Drawing.Point(4, 4);
+            this.flowAssets.Name = "flowAssets";
+            this.flowAssets.Padding = new System.Windows.Forms.Padding(3);
+            this.flowAssets.Size = new System.Drawing.Size(243, 449);
+            this.flowAssets.TabIndex = 0;
+            // 
+            // tabPageWatchlist
+            // 
+            this.tabPageWatchlist.Location = new System.Drawing.Point(4, 25);
+            this.tabPageWatchlist.Name = "tabPageWatchlist";
+            this.tabPageWatchlist.Size = new System.Drawing.Size(200, 367);
+            this.tabPageWatchlist.TabIndex = 1;
+            this.tabPageWatchlist.Text = "Watchlist";
+            this.tabPageWatchlist.UseVisualStyleBackColor = true;
             // 
             // tabControl
             // 
@@ -98,7 +140,7 @@
             this.tabControl.Location = new System.Drawing.Point(0, 0);
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
-            this.tabControl.Size = new System.Drawing.Size(889, 347);
+            this.tabControl.Size = new System.Drawing.Size(904, 394);
             this.tabControl.TabIndex = 0;
             // 
             // tabPageDebug
@@ -107,7 +149,7 @@
             this.tabPageDebug.Location = new System.Drawing.Point(4, 25);
             this.tabPageDebug.Name = "tabPageDebug";
             this.tabPageDebug.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageDebug.Size = new System.Drawing.Size(881, 318);
+            this.tabPageDebug.Size = new System.Drawing.Size(896, 365);
             this.tabPageDebug.TabIndex = 0;
             this.tabPageDebug.Text = "Debug";
             this.tabPageDebug.UseVisualStyleBackColor = true;
@@ -117,7 +159,7 @@
             this.tabPageTest.Location = new System.Drawing.Point(4, 25);
             this.tabPageTest.Name = "tabPageTest";
             this.tabPageTest.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageTest.Size = new System.Drawing.Size(1141, 399);
+            this.tabPageTest.Size = new System.Drawing.Size(896, 367);
             this.tabPageTest.TabIndex = 1;
             this.tabPageTest.Text = "Test";
             this.tabPageTest.UseVisualStyleBackColor = true;
@@ -128,11 +170,11 @@
             // toolStripContainer.ContentPanel
             // 
             this.toolStripContainer.ContentPanel.Controls.Add(this.splitContainer);
-            this.toolStripContainer.ContentPanel.Size = new System.Drawing.Size(1098, 347);
+            this.toolStripContainer.ContentPanel.Size = new System.Drawing.Size(1120, 394);
             this.toolStripContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.toolStripContainer.Location = new System.Drawing.Point(0, 28);
+            this.toolStripContainer.Location = new System.Drawing.Point(0, 30);
             this.toolStripContainer.Name = "toolStripContainer";
-            this.toolStripContainer.Size = new System.Drawing.Size(1098, 374);
+            this.toolStripContainer.Size = new System.Drawing.Size(1120, 421);
             this.toolStripContainer.TabIndex = 3;
             this.toolStripContainer.Text = "toolStripContainer1";
             // 
@@ -151,41 +193,13 @@
             this.menuItemHealthCheck});
             this.toolStripMain.Location = new System.Drawing.Point(4, 0);
             this.toolStripMain.Name = "toolStripMain";
-            this.toolStripMain.Size = new System.Drawing.Size(106, 27);
+            this.toolStripMain.Size = new System.Drawing.Size(145, 27);
             this.toolStripMain.TabIndex = 0;
-            // 
-            // menuItemSwitchAU
-            // 
-            this.menuItemSwitchAU.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.menuItemSwitchAU.Image = global::TickrWindowsClient.Properties.Resources.flag_aus;
-            this.menuItemSwitchAU.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.menuItemSwitchAU.Name = "menuItemSwitchAU";
-            this.menuItemSwitchAU.Size = new System.Drawing.Size(29, 24);
-            this.menuItemSwitchAU.Text = "toolStripButton2";
-            // 
-            // menuItemSwitchUS
-            // 
-            this.menuItemSwitchUS.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.menuItemSwitchUS.Image = global::TickrWindowsClient.Properties.Resources.flag_usa;
-            this.menuItemSwitchUS.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.menuItemSwitchUS.Name = "menuItemSwitchUS";
-            this.menuItemSwitchUS.Size = new System.Drawing.Size(29, 24);
-            this.menuItemSwitchUS.Text = "toolStripButton3";
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(6, 27);
-            // 
-            // menuItemHealthCheck
-            // 
-            this.menuItemHealthCheck.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.menuItemHealthCheck.Image = global::TickrWindowsClient.Properties.Resources.status_health;
-            this.menuItemHealthCheck.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.menuItemHealthCheck.Name = "menuItemHealthCheck";
-            this.menuItemHealthCheck.Size = new System.Drawing.Size(29, 24);
-            this.menuItemHealthCheck.Text = "toolStripButton1";
-            this.menuItemHealthCheck.Click += new System.EventHandler(this.menuItemHealthCheck_Click);
             // 
             // menuStripMain
             // 
@@ -194,7 +208,7 @@
             this.portfolioToolStripMenuItem});
             this.menuStripMain.Location = new System.Drawing.Point(0, 0);
             this.menuStripMain.Name = "menuStripMain";
-            this.menuStripMain.Size = new System.Drawing.Size(1098, 28);
+            this.menuStripMain.Size = new System.Drawing.Size(1120, 30);
             this.menuStripMain.TabIndex = 4;
             this.menuStripMain.Text = "menuStrip1";
             // 
@@ -205,7 +219,7 @@
             this.toolStripSeparator1,
             this.menuItemExit});
             this.portfolioToolStripMenuItem.Name = "portfolioToolStripMenuItem";
-            this.portfolioToolStripMenuItem.Size = new System.Drawing.Size(80, 24);
+            this.portfolioToolStripMenuItem.Size = new System.Drawing.Size(80, 26);
             this.portfolioToolStripMenuItem.Text = "Portfolio";
             // 
             // menuItemOpen
@@ -225,49 +239,41 @@
             this.menuItemExit.Size = new System.Drawing.Size(128, 26);
             this.menuItemExit.Text = "E&xit";
             // 
-            // tabControlSideBar
+            // menuItemSwitchAU
             // 
-            this.tabControlSideBar.Controls.Add(this.tabPageAssets);
-            this.tabControlSideBar.Controls.Add(this.tabPageWatchlist);
-            this.tabControlSideBar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControlSideBar.Location = new System.Drawing.Point(0, 0);
-            this.tabControlSideBar.Name = "tabControlSideBar";
-            this.tabControlSideBar.SelectedIndex = 0;
-            this.tabControlSideBar.Size = new System.Drawing.Size(205, 347);
-            this.tabControlSideBar.TabIndex = 0;
+            this.menuItemSwitchAU.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.menuItemSwitchAU.Image = global::TickrWindowsClient.Properties.Resources.flag_aus;
+            this.menuItemSwitchAU.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.menuItemSwitchAU.Name = "menuItemSwitchAU";
+            this.menuItemSwitchAU.Size = new System.Drawing.Size(29, 24);
+            this.menuItemSwitchAU.Text = "toolStripButton2";
+            this.menuItemSwitchAU.ToolTipText = "ASX";
             // 
-            // tabPageAssets
+            // menuItemSwitchUS
             // 
-            this.tabPageAssets.Controls.Add(this.flowAssets);
-            this.tabPageAssets.Location = new System.Drawing.Point(4, 25);
-            this.tabPageAssets.Name = "tabPageAssets";
-            this.tabPageAssets.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageAssets.Size = new System.Drawing.Size(197, 318);
-            this.tabPageAssets.TabIndex = 0;
-            this.tabPageAssets.Text = "Assets";
-            this.tabPageAssets.UseVisualStyleBackColor = true;
+            this.menuItemSwitchUS.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.menuItemSwitchUS.Image = global::TickrWindowsClient.Properties.Resources.flag_usa;
+            this.menuItemSwitchUS.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.menuItemSwitchUS.Name = "menuItemSwitchUS";
+            this.menuItemSwitchUS.Size = new System.Drawing.Size(29, 24);
+            this.menuItemSwitchUS.Text = "toolStripButton3";
+            this.menuItemSwitchUS.ToolTipText = "NASDAQ and NYSE";
+            this.menuItemSwitchUS.Click += new System.EventHandler(this.menuItemSwitchUS_Click);
             // 
-            // tabPageWatchlist
+            // menuItemHealthCheck
             // 
-            this.tabPageWatchlist.Location = new System.Drawing.Point(4, 25);
-            this.tabPageWatchlist.Name = "tabPageWatchlist";
-            this.tabPageWatchlist.Size = new System.Drawing.Size(211, 405);
-            this.tabPageWatchlist.TabIndex = 1;
-            this.tabPageWatchlist.Text = "Watchlist";
-            this.tabPageWatchlist.UseVisualStyleBackColor = true;
-            // 
-            // flowAssets
-            // 
-            this.flowAssets.BackColor = System.Drawing.Color.IndianRed;
-            this.flowAssets.Location = new System.Drawing.Point(29, 31);
-            this.flowAssets.Name = "flowAssets";
-            this.flowAssets.Size = new System.Drawing.Size(138, 218);
-            this.flowAssets.TabIndex = 0;
+            this.menuItemHealthCheck.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.menuItemHealthCheck.Image = global::TickrWindowsClient.Properties.Resources.status_health;
+            this.menuItemHealthCheck.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.menuItemHealthCheck.Name = "menuItemHealthCheck";
+            this.menuItemHealthCheck.Size = new System.Drawing.Size(29, 24);
+            this.menuItemHealthCheck.Text = "toolStripButton1";
+            this.menuItemHealthCheck.Click += new System.EventHandler(this.menuItemHealthCheck_Click);
             // 
             // SimpleUI
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(1098, 402);
+            this.ClientSize = new System.Drawing.Size(1120, 451);
             this.Controls.Add(this.toolStripContainer);
             this.Controls.Add(this.menuStripMain);
             this.KeyPreview = true;
@@ -280,6 +286,8 @@
             this.splitContainer.Panel1.ResumeLayout(false);
             this.splitContainer.Panel2.ResumeLayout(false);
             this.splitContainer.ResumeLayout(false);
+            this.tabControlSideBar.ResumeLayout(false);
+            this.tabPageAssets.ResumeLayout(false);
             this.tabControl.ResumeLayout(false);
             this.tabPageDebug.ResumeLayout(false);
             this.tabPageDebug.PerformLayout();
@@ -292,8 +300,6 @@
             this.toolStripMain.PerformLayout();
             this.menuStripMain.ResumeLayout(false);
             this.menuStripMain.PerformLayout();
-            this.tabControlSideBar.ResumeLayout(false);
-            this.tabPageAssets.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
