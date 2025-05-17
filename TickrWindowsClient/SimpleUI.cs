@@ -18,15 +18,13 @@ namespace TickrWindowsClient
             InitializeComponent();
         }
 
-        private void btnTest_Click(object sender, EventArgs e)
+        private void toolDebug_Click(object sender, EventArgs e)
         {
-            
-
             try
             {
                 System.Net.ServicePointManager.SecurityProtocol = System.Net.SecurityProtocolType.Tls;
 
-                string apiUrl = "http://localhost:5112/tickr/status/all"; 
+                string apiUrl = "http://localhost:5112/tickr/status/all";
 
                 HttpWebRequest request = (HttpWebRequest)WebRequest.Create(apiUrl);
                 request.Method = "GET";
