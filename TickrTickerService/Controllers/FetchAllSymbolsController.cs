@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using TickrTickerService.Entities;
 
 namespace TickrTickerService.Controllers
 {
@@ -14,7 +15,7 @@ namespace TickrTickerService.Controllers
         }
 
         [HttpGet("assets", Name = "ListAllAssets")]
-        public IEnumerable<AssetSymbol> Get()
+        public IEnumerable<Asset> Get()
         {
             var requestTime = DateTime.Now.ToShortTimeString();
 
@@ -27,7 +28,7 @@ namespace TickrTickerService.Controllers
                 "MRNA", "SBUX"
             };
 
-            return nasdaqTickers.Select(index => new AssetSymbol
+            return nasdaqTickers.Select(index => new Asset
             {
                 Symbol = index
             })

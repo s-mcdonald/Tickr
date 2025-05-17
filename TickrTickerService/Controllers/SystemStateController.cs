@@ -20,9 +20,9 @@ namespace TickrTickerService.Controllers
         }
 
         [HttpGet("status", Name = "Status")]
-        public SyatemState Get()
+        public SystemState Get()
         {
-            return new SyatemState
+            return new SystemState
             {
                 Date = DateTime.Now.Date,
                 State = States[2],

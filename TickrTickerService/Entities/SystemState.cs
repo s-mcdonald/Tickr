@@ -1,6 +1,6 @@
 namespace TickrTickerService.Entities
 {
-    public class SyatemState
+    public class SystemState
     {
         public DateTime Date { get; set; }
 
