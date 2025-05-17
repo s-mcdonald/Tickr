@@ -1,7 +1,8 @@
-﻿using System;
+﻿using ScottPlot;
+using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 using TickrWindowsClient.Api;
-using TickrWindowsClient.DataProviders;
 using TickrWindowsClient.UserControls;
 
 namespace TickrWindowsClient
@@ -16,14 +17,6 @@ namespace TickrWindowsClient
             InitializeComponent();
             assetService = new AssetService();
             healthCheck = new HealthCheckService();
-
-            var sampleDataProvider = new SampleChartDataProvider();
-            chart.Plot.Add.Scatter(
-                sampleDataProvider.getXData(),
-                sampleDataProvider.getYData()
-            );
-
-            chart.Refresh();
         }
 
         private void menuItemHealthCheck_Click(object sender, EventArgs e)
@@ -53,7 +46,21 @@ namespace TickrWindowsClient
 
         private void TickerItem_TickerClicked(object sender, string symbol)
         {
-            MessageBox.Show($"You clicked on ticker: {symbol}");
+            var result = assetService.HistoricalPriceData(symbol);
+
+            var OHLCs = new List<OHLC>();
+
+            // Plot https://www.nuget.org/packages/ScottPlot.WinForms/5.0.55
+            foreach (var i in result)
+            {
+                OHLCs.Add(new OHLC(i.Open, i.High, i.Low, i.Close, i.Date, i.TimeSpan));
+            }
+
+            chart.Plot.Add.Candlestick(OHLCs);
+
+            chart.Plot.Axes.DateTimeTicksBottom();
+
+            chart.Refresh();
         }
     }
 }

@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using TickrWindowsClient.Entities;
 
 namespace TickrWindowsClient.Api
 {
@@ -18,18 +19,27 @@ namespace TickrWindowsClient.Api
             if (response.RequestStatus.Success)
             {
                 List<Ticker> tickers = JsonConvert.DeserializeObject<List<Ticker>>(response.ResponseMessage);
-
                 string[] symbols = tickers.Select(t => t.Symbol).ToArray();
-                // convert to array
                 return symbols;
             }
 
             Console.WriteLine(ApiEndPoint.ListAllAssets);
 
-
             return new string[] { "", "" };
+        }
 
-            throw new Exception(response.ResponseMessage);
+        public List<AssetHistoricalPriceData> HistoricalPriceData(string asset)
+        {
+            var response = ApiRequest.Get(ApiEndPoint.ListHistoricalData.Replace("[symbol]", asset));
+            if (response.RequestStatus.Success)
+            {
+                List<AssetHistoricalPriceData> tickers = JsonConvert.DeserializeObject<List<AssetHistoricalPriceData>>(response.ResponseMessage);
+                return tickers;
+            }
+
+            Console.WriteLine(ApiEndPoint.ListHistoricalData);
+
+            return new List<AssetHistoricalPriceData> { };
         }
     }
 }

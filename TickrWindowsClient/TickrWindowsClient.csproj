@@ -104,6 +104,7 @@
   <ItemGroup>
     <Compile Include="Api\ApiRequest.cs" />
     <Compile Include="Api\ApiResponse.cs" />
+    <Compile Include="Entities\AssetHistoricalPriceData.cs" />
     <Compile Include="DataProviders\SampleChartDataProvider.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
