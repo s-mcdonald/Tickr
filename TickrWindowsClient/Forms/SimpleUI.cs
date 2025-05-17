@@ -37,17 +37,23 @@ namespace TickrWindowsClient
 
             var assets = assetService.FetchAll();
 
-            // Iterate and add items
             foreach (var i in assets)
             {
                 TickerFlowItem item = new TickerFlowItem(i);
+                item.TickerClicked += TickerItem_TickerClicked;
+
                 flowAssets.Controls.Add(item);
 
                 item.Width = 70; 
-                item.Height = 70; 
+                item.Height = 70;
             }
 
             flowAssets.ResumeLayout();
+        }
+
+        private void TickerItem_TickerClicked(object sender, string symbol)
+        {
+            MessageBox.Show($"You clicked on ticker: {symbol}");
         }
     }
 }

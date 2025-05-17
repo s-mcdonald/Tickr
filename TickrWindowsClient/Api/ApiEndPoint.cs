@@ -29,7 +29,7 @@ namespace TickrWindowsClient.Api
 
 
         // Get Historical Price Data
-        public static string ListHistoricalAllAssets => $"{Protocol}{TickerServiceBaseUrl}tickr/assets/history/[symbol]/interval/[interval]";
+        public static string ListHistoricalData => $"{Protocol}{TickerServiceBaseUrl}tickr/assets/history/[symbol]/interval/[interval]";
 
         // Get a list of available exchanges
         public static string ListExchanges => $"{Protocol}{TickerServiceBaseUrl}tickr/assets/exchanges";
