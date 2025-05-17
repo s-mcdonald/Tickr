@@ -48,6 +48,8 @@
             this.menuItemOpen = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.menuItemExit = new System.Windows.Forms.ToolStripMenuItem();
+            this.formsPlot1 = new ScottPlot.WinForms.FormsPlot();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer)).BeginInit();
             this.splitContainer.Panel1.SuspendLayout();
             this.splitContainer.Panel2.SuspendLayout();
             this.splitContainer.SuspendLayout();
@@ -55,6 +57,7 @@
             this.tabPageAssets.SuspendLayout();
             this.tabControl.SuspendLayout();
             this.tabPageDebug.SuspendLayout();
+            this.tabPageTest.SuspendLayout();
             this.toolStripContainer.ContentPanel.SuspendLayout();
             this.toolStripContainer.TopToolStripPanel.SuspendLayout();
             this.toolStripContainer.SuspendLayout();
@@ -127,7 +130,7 @@
             // 
             this.tabPageWatchlist.Location = new System.Drawing.Point(4, 25);
             this.tabPageWatchlist.Name = "tabPageWatchlist";
-            this.tabPageWatchlist.Size = new System.Drawing.Size(200, 365);
+            this.tabPageWatchlist.Size = new System.Drawing.Size(199, 367);
             this.tabPageWatchlist.TabIndex = 1;
             this.tabPageWatchlist.Text = "Watchlist";
             this.tabPageWatchlist.UseVisualStyleBackColor = true;
@@ -157,10 +160,11 @@
             // 
             // tabPageTest
             // 
+            this.tabPageTest.Controls.Add(this.formsPlot1);
             this.tabPageTest.Location = new System.Drawing.Point(4, 25);
             this.tabPageTest.Name = "tabPageTest";
             this.tabPageTest.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageTest.Size = new System.Drawing.Size(896, 365);
+            this.tabPageTest.Size = new System.Drawing.Size(897, 367);
             this.tabPageTest.TabIndex = 1;
             this.tabPageTest.Text = "Test";
             this.tabPageTest.UseVisualStyleBackColor = true;
@@ -271,6 +275,14 @@
             this.menuItemExit.Size = new System.Drawing.Size(128, 26);
             this.menuItemExit.Text = "E&xit";
             // 
+            // formsPlot1
+            // 
+            this.formsPlot1.DisplayScale = 0F;
+            this.formsPlot1.Location = new System.Drawing.Point(133, 57);
+            this.formsPlot1.Name = "formsPlot1";
+            this.formsPlot1.Size = new System.Drawing.Size(593, 265);
+            this.formsPlot1.TabIndex = 0;
+            // 
             // SimpleUI
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -286,12 +298,14 @@
             this.TopMost = true;
             this.splitContainer.Panel1.ResumeLayout(false);
             this.splitContainer.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer)).EndInit();
             this.splitContainer.ResumeLayout(false);
             this.tabControlSideBar.ResumeLayout(false);
             this.tabPageAssets.ResumeLayout(false);
             this.tabControl.ResumeLayout(false);
             this.tabPageDebug.ResumeLayout(false);
             this.tabPageDebug.PerformLayout();
+            this.tabPageTest.ResumeLayout(false);
             this.toolStripContainer.ContentPanel.ResumeLayout(false);
             this.toolStripContainer.TopToolStripPanel.ResumeLayout(false);
             this.toolStripContainer.TopToolStripPanel.PerformLayout();
@@ -327,6 +341,7 @@
         private System.Windows.Forms.TabPage tabPageAssets;
         private System.Windows.Forms.TabPage tabPageWatchlist;
         private System.Windows.Forms.FlowLayoutPanel flowAssets;
+        private ScottPlot.WinForms.FormsPlot formsPlot1;
     }
 }
 
