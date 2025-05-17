@@ -8,30 +8,31 @@ namespace TickrWindowsClient.Api
     {
         private const string Protocol = "http";
 
-        private const string BaseUrl = "://localhost:5112/";
-        private const string TickerBaseUrl = "://localhost:5054/";
+        private const string HealthServiceBaseUrl = "://localhost:5112/";
+        private const string TickerServiceBaseUrl = "://localhost:5054/";
+        // private const string TradingServiceApiBaseUrl = "://localhost:5055/";
 
         // This calls the TickerHealthService and gets all servers in single request
-        public static string HealthCheckStatusAll => $"{Protocol}{BaseUrl}tickr/status";
+        public static string HealthCheckStatusAll => $"{Protocol}{HealthServiceBaseUrl}tickr/status";
 
         // List all assets
         // This is will eventually become a large list so it prob needs additional filtering
         // such as by exchange, of by type ect
-        public static string ListAllAssets => $"{Protocol}{TickerBaseUrl}tickr/assets";
+        public static string ListAllAssets => $"{Protocol}{TickerServiceBaseUrl}tickr/assets";
 
 
         // Get Current Quote
         // if there are two ticker symbols that have the same code, we need to differentiate them
         // by excahnge, so the exchange suffix is optional, however if a result has
         // 2 or more items only the first result will be displayed
-        public static string GetQuote => $"{Protocol}{TickerBaseUrl}tickr/assets/quote/[symbol][exchange_suffix?]";
+        public static string GetQuote => $"{Protocol}{TickerServiceBaseUrl}tickr/assets/quote/[symbol][exchange_suffix?]";
 
 
         // Get Historical Price Data
-        public static string ListHistoricalAllAssets => $"{Protocol}{TickerBaseUrl}tickr/assets/history/[symbol]/interval/[interval]";
+        public static string ListHistoricalAllAssets => $"{Protocol}{TickerServiceBaseUrl}tickr/assets/history/[symbol]/interval/[interval]";
 
         // Get a list of available exchanges
-        public static string ListExchanges => $"{Protocol}{TickerBaseUrl}tickr/assets/exchanges";
+        public static string ListExchanges => $"{Protocol}{TickerServiceBaseUrl}tickr/assets/exchanges";
 
         // we can add more later
     }
